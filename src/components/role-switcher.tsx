@@ -18,7 +18,7 @@ export function RoleSwitcher() {
       aria-label={t("users.role")}
       value={role}
       onChange={(e) => setRole(e.target.value as Role)}
-      className="h-9 w-auto pr-8"
+      className="h-9 w-auto"
     >
       {ROLES.map((r) => (
         <option key={r} value={r}>
