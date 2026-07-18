@@ -34,9 +34,9 @@ export function Sidebar() {
   const items = useNavItems();
 
   return (
-    <aside className="hidden w-60 shrink-0 border-r border-border bg-card md:block">
+    <aside className="hidden w-60 shrink-0 border-r border-border bg-background md:block">
       <div className="flex h-16 items-center gap-2 border-b border-border px-6">
-        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
+        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-foreground text-background">
           <ShieldCheck className="h-4 w-4" />
         </div>
         <span className="font-display text-base font-semibold tracking-tight">{t("app.name")}</span>
@@ -52,7 +52,7 @@ export function Sidebar() {
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 active
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-muted text-foreground"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground",
               )}
             >
@@ -72,7 +72,7 @@ export function MobileNav() {
   const items = useNavItems();
 
   return (
-    <nav className="flex gap-1 overflow-x-auto border-b border-border bg-card px-3 py-2 md:hidden">
+    <nav className="flex gap-1 overflow-x-auto border-b border-border bg-background px-3 py-2 md:hidden">
       {items.map((item) => {
         const active = pathname === item.href;
         return (
@@ -81,7 +81,7 @@ export function MobileNav() {
             href={item.href}
             className={cn(
               "whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted",
+              active ? "bg-muted text-foreground" : "text-muted-foreground hover:bg-muted",
             )}
           >
             {t(item.label)}

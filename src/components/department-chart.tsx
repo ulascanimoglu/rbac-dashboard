@@ -41,7 +41,13 @@ export function DepartmentChart({ data }: { data: Stats["byDepartment"] }) {
             }}
             labelStyle={{ color: "hsl(var(--foreground))" }}
           />
-          <Bar dataKey="count" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} maxBarSize={48} />
+          <Bar
+            dataKey="count"
+            fill="hsl(var(--foreground))"
+            fillOpacity={0.9}
+            radius={[4, 4, 0, 0]}
+            maxBarSize={48}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -18,7 +18,7 @@ export default function UsersPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border text-left text-xs uppercase tracking-wide text-muted-foreground">
+              <tr className="border-b border-border bg-muted/50 text-left text-xs text-muted-foreground">
                 <th className="px-4 py-3 font-medium">{t("users.role")}</th>
                 {ALL_PERMISSIONS.map((permission) => (
                   <th key={permission} className="px-4 py-3 text-center font-medium">
@@ -31,7 +31,7 @@ export default function UsersPage() {
               {ROLES.map((role) => (
                 <tr key={role} className="border-b border-border last:border-0">
                   <td className="px-4 py-3">
-                    <Badge tone="primary">{t(roleLabelKey[role])}</Badge>
+                    <Badge>{t(roleLabelKey[role])}</Badge>
                   </td>
                   {ALL_PERMISSIONS.map((permission) => (
                     <td key={permission} className="px-4 py-3 text-center">

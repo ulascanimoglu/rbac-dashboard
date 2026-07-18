@@ -48,7 +48,7 @@ export default function LoginPage() {
       </div>
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
-          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-foreground text-background">
             <ShieldCheck className="h-6 w-6" />
           </div>
           <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">
@@ -63,9 +63,9 @@ export default function LoginPage() {
               key={role}
               type="button"
               onClick={() => signIn(role)}
-              className="group flex w-full items-center gap-4 rounded-lg border border-border bg-card p-4 text-left transition-colors hover:border-primary hover:bg-muted/50"
+              className="group flex w-full items-center gap-4 rounded-lg border border-border bg-card p-4 text-left transition-colors hover:border-foreground/25 hover:bg-muted/40"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground transition-colors group-hover:bg-primary/10 group-hover:text-primary">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">

@@ -68,7 +68,7 @@ export function EmployeeTable() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border text-left text-xs uppercase tracking-wide text-muted-foreground">
+              <tr className="border-b border-border bg-muted/50 text-left text-xs text-muted-foreground">
                 {SORT_COLUMNS.map((col) => (
                   <th key={col.key} className="px-4 py-3 font-medium">
                     <button

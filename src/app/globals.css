@@ -4,48 +4,52 @@
 
 @layer base {
   :root {
+    color-scheme: light;
+
     --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-    --font-display: "Space Grotesk Variable", var(--font-sans);
+    --font-display: var(--font-sans);
     --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 
-    --background: 240 20% 99%;
-    --foreground: 240 10% 6%;
+    --background: 0 0% 99%;
+    --foreground: 0 0% 9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 6%;
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 44%;
-    --border: 240 6% 90%;
-    --input: 240 6% 88%;
-    --primary: 246 84% 63%;
+    --card-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 44%;
+    --border: 0 0% 90%;
+    --input: 0 0% 86%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
-    --success: 152 56% 40%;
+    --success: 150 55% 34%;
     --success-foreground: 0 0% 100%;
-    --warning: 35 92% 50%;
-    --warning-foreground: 40 45% 12%;
-    --danger: 0 72% 51%;
+    --warning: 35 90% 40%;
+    --warning-foreground: 0 0% 100%;
+    --danger: 0 65% 48%;
     --danger-foreground: 0 0% 100%;
-    --ring: 246 84% 63%;
-    --radius: 0.6rem;
+    --ring: 0 0% 40%;
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 5%;
-    --foreground: 0 0% 96%;
-    --card: 240 8% 9%;
-    --card-foreground: 0 0% 96%;
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 62%;
-    --border: 240 5% 17%;
-    --input: 240 5% 22%;
-    --primary: 246 90% 70%;
-    --primary-foreground: 240 10% 6%;
-    --success: 152 52% 46%;
-    --success-foreground: 240 10% 6%;
-    --warning: 35 92% 56%;
-    --warning-foreground: 40 45% 10%;
-    --danger: 0 72% 58%;
-    --danger-foreground: 240 10% 6%;
-    --ring: 246 90% 70%;
+    color-scheme: dark;
+
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 19%;
+    --primary: 0 0% 93%;
+    --primary-foreground: 0 0% 9%;
+    --success: 150 45% 55%;
+    --success-foreground: 0 0% 9%;
+    --warning: 38 85% 58%;
+    --warning-foreground: 0 0% 9%;
+    --danger: 0 70% 62%;
+    --danger-foreground: 0 0% 9%;
+    --ring: 0 0% 62%;
   }
 
   * {
@@ -54,6 +58,11 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Native select popups can't be fully themed; pin readable colors per theme. */
+  option {
+    @apply bg-card text-foreground;
   }
 
   :focus-visible {
